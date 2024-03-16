@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (6 pts)
+# DONE: 1. (6 pts)
 #
 #   For this _TODO_, we are going to bring together many of the concepts that
 #   we have learned.
@@ -47,20 +47,18 @@ def recipe_book():
             break
         else:
             recipes["name"] = recipe_name
+        ingredient_set = set()
         while adding == True:
-            ingredient_set = {"deleted"}
-            ingredient_set.clear()
             ingredient = input("Please enter an ingredient: ")
             if ingredient == "end":
-                print(ingredient_set)
                 break
             else:
                 ingredient_set.add(ingredient)
         recipes["ingredients"] = ingredient_set
         recipe_list.append(recipes)
-    print(recipe_list)
+    for x in recipe_list:
+        print(x)
 recipe_book()
-
 ###############################################################################
 # TODO: 2. EXTRA CREDIT (2 pts)
 #
