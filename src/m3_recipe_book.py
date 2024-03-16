@@ -35,6 +35,31 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+recipe_list = []
+running = True
+adding = True
+def recipe_book():
+    print("Weclome to Recipe Book!")
+    while running == True:
+        recipes = {}
+        recipe_name = input("Please enter a recipe name: ")
+        if recipe_name == "end":
+            break
+        else:
+            recipes["name"] = recipe_name
+        while adding == True:
+            ingredient_set = {"deleted"}
+            ingredient_set.clear()
+            ingredient = input("Please enter an ingredient: ")
+            if ingredient == "end":
+                print(ingredient_set)
+                break
+            else:
+                ingredient_set.add(ingredient)
+        recipes["ingredients"] = ingredient_set
+        recipe_list.append(recipes)
+    print(recipe_list)
+recipe_book()
 
 ###############################################################################
 # TODO: 2. EXTRA CREDIT (2 pts)
