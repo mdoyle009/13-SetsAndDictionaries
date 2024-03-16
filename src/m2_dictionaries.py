@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #   
 #   This module is going to look very similar to other modules that you have
 #   done with lists, tuples, and sets, but this time we will use dictionaries
@@ -20,8 +20,16 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+contact = {
+    "name": "John Smith",
+    "phone": "(123) 456-7890",
+    "email": "jsmith001@gmail.com",
+    "address": "123 4th Street"
+}
+print(contact)
+
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #   
 #   For this _TODO_, write a line of code that accesses the "email" item in the
 #   dictionary and prints the value.
@@ -29,8 +37,10 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+print(contact["email"])
+
 ###############################################################################
-# TODO: 3. (2 pts)
+# DONE: 3. (2 pts)
 #   
 #   For this _TODO_, write a line of code that changes the "name" item to a
 #   different name. Once you have done this, print the dictionary. Make sure
@@ -39,8 +49,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+contact["name"] = "John Doe"
+print(contact)
+
 ###############################################################################
-# TODO: 4. (2 pts)
+# DONE: 4. (2 pts)
 #   
 #   For this _TODO_, write a line of code that adds an item to the dictionary
 #   with the key "birthday". Once you have done this, print the dictionary.
@@ -50,8 +63,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+contact["birthday"] = "April 1"
+print(contact)
+
 ###############################################################################
-# TODO: 5. (2 pts)
+# DONE: 5. (2 pts)
 #   
 #   For this _TODO_, write a line of code that removes the last item that has
 #   been added to the dictionary. Once you have done this, print the
@@ -59,13 +75,16 @@
 #   modify the original.
 #
 #   NOTE: Your solution should work no matter what the last added item was, so
-#   do NOT us a key value in your solution.
+#   do NOT use a key value in your solution.
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+contact.popitem()
+print(contact)
+
 ###############################################################################
-# TODO: 6. (2 pts)
+# DONE: 6. (2 pts)
 #
 #   For this _TODO_, write a line of code that creates a copy of your
 #   dictionary. Make sure you create an actual copy of the dictionary and not
@@ -76,3 +95,6 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+contact1 = contact.copy()
+print(contact1)
